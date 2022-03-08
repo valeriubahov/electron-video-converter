@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Video Player Converter</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+    <script src="https://cdn.plyr.io/3.5.6/plyr.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const player = Plyr.setup(".js-player");
+      });
+    </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1 id="selectFile" hidden>Select a video from the menu</h1>
+      <video class="js-player">
+        <!--source video provided is a placeholder only. You'll need to apply a video to the source tag programatically -->
+        <source src="" />
+      </video>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

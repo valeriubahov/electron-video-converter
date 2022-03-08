@@ -1,0 +1,64 @@
+{
+  "name": "video-player",
+  "version": "1.0.0",
+  "description": "Video player and converter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriubahov/electron-video-converter.git"
+  },
+  "author": "Valeriu Bahov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriubahov/electron-video-converter/issues"
+  },
+  "homepage": "https://github.com/valeriubahov/electron-video-converter#readme",
+  "dependencies": {
+    "electron-progressbar": "^2.0.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "ffmpeg-static-electron": "^2.0.3",
+    "ffprobe-static-electron": "^2.0.2",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/maker-deb": "^6.0.0-beta.63",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "electron": "^17.1.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "VideoPlayer"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}
